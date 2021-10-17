@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import NavBar from './components/NavBar'
 
 function App() {
+
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: 'dark',
+        },
+      })
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        hey 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <NavBar />
+    </ThemeProvider>
   );
 }
 
