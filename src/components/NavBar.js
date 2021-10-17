@@ -11,7 +11,7 @@ import SortIcon from '@material-ui/icons/Sort';
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" elevation={0} style={{background: 'none'}}>
+      <AppBar position="static" elevation={0} style={{background: 'none', display: 'flex' }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -22,9 +22,7 @@ export default function NavBar() {
           >
         <SortIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            DJ Taylor
-          </Typography>
+
           <Button color="inherit">About</Button>
           <Button color="inherit">Projects</Button>
           <Button color="inherit">Contact</Button>
