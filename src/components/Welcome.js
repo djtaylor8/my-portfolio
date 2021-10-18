@@ -19,7 +19,7 @@ const Welcome = () => {
             <Grid container spacing={1} direction='row' style={{display: 'flex', maxWidth: 1200, margin: '0 auto', justifyContent: 'center', marginTop: '5rem' }}>
             <Grid item sm={6}>
             <Typography variant='h1'>DJ Taylor</Typography>
-            <Typography variant='subtitle1'>Full Stack Developer | Musician | Educator</Typography>
+            <Typography variant='subtitle1'>Full Stack Developer | Musician</Typography>
             </Grid>
             <Grid item sm={6}>
             <Avatar src={Image} className={classes.sizeAvatar} />    

@@ -98,9 +98,11 @@ export default function NavBar({ darkMode, setDarkMode }) {
           open={Boolean(anchorEl)}
           onClose={handleClose}
           >
-          <MenuItem onClick={() => console.log('hi')}>About</MenuItem>
-          <MenuItem onClick={() => console.log('hello')}>Projects</MenuItem>
-          <MenuItem onClick={() => console.log('hello')}>Contact</MenuItem>
+         <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <MenuItem onClick={() => console.log('hi')}><Typography variant='subtitle2'>About</Typography></MenuItem>
+          <MenuItem onClick={() => console.log('hello')}><Typography variant='subtitle2'>Projects</Typography></MenuItem>
+          <MenuItem onClick={() => console.log('hello')}><Typography variant='subtitle2'>Contact</Typography></MenuItem>
+          </div>
           </Menu>
           </div>
           <ModeSwitch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
