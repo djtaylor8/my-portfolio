@@ -1,33 +1,68 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+import { Switch, Typography } from '@material-ui/core';
 import IconButton from '@mui/material/IconButton';
-import SortIcon from '@material-ui/icons/Sort';
+import MenuIcon from '@material-ui/icons/Menu';
 
+export default function NavBar({ darkMode, setDarkMode }) {
 
-export default function NavBar() {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleMenu = (e) => {
+        setAnchorEl(e.currentTarget);
+    };
+
+    const handleClose = (e) => {
+        setAnchorEl(null);
+    };
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" elevation={0} style={{background: 'none', display: 'flex' }}>
         <Toolbar>
+        <div style={{ flexGrow: '1' }}>
           <IconButton
             size="large"
-            edge="start"
-            color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
+            color='primary'
+            onClick={handleMenu}
           >
-        <SortIcon />
+        <MenuIcon />
           </IconButton>
-
-          <Button color="inherit">About</Button>
-          <Button color="inherit">Projects</Button>
-          <Button color="inherit">Contact</Button>
+          <Menu
+          anchorEl={anchorEl}
+          PaperProps={{
+              style: {
+                  width: 100,
+              },
+          }}
+          anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+          }}
+          keepMounted
+          transformOrigin={{
+              vertical: 'top',
+              horizontal: 'left',
+          }}
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+          >
+          <div style={{ textAlign: 'center' }}>
+          <MenuItem onClick={() => console.log('hi')}>About</MenuItem>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+          <MenuItem onClick={() => console.log('hello')}>Projects</MenuItem>
+          </div>
+          <div style={{ textAlign: 'center' }}>
+          <MenuItem onClick={() => console.log('hello')}>Contact</MenuItem>
+          </div>
+          </Menu>
+          </div>
+          <Switch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
         </Toolbar>
       </AppBar>
-    </Box>
   );
 }

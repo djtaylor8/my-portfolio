@@ -16,9 +16,9 @@ const Welcome = () => {
 
     return (
         <div>
-            <Grid container spacing={1} direction='row' style={{display: 'flex', maxWidth: 1100, margin: '0 auto', marginTop: '5rem', alignItems: 'center', justifyContent: 'center' }}>
+            <Grid container spacing={1} direction='row' style={{display: 'flex', maxWidth: 1200, margin: '0 auto', marginTop: '5rem', alignItems: 'center', justifyContent: 'center' }}>
             <Grid item sm={6}>
-            <Typography variant='h2'>DJ Taylor</Typography>
+            <Typography variant='h1'>DJ Taylor</Typography>
             <Typography variant='subtitle1'>Full Stack Developer | Musician | Educator</Typography>
             </Grid>
             <Grid item sm={6}>
