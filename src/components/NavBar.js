@@ -45,7 +45,7 @@ export default function NavBar({ darkMode, toggleDarkMode }) {
         setAnchorEl(null);
     }
 
-    const ModeSwitch = styled(Switch)(({ theme }) => ({
+    const ModeSwitch = styled(Switch)(() => ({
         width: 62,
         height: 34,
         padding: 7,
