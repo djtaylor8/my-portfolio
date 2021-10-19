@@ -8,6 +8,7 @@ import Welcome from './components/Welcome';
 import About from './components/About';
 import ProjectIndex from './components/projects/ProjectIndex';
 import ProjectShow from './components/projects/ProjectShow';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -48,6 +49,7 @@ if (!componentMounted) {
           </Route>
 
         </Switch>
+        <Footer />
       </ThemeProvider>
     </Router>
   );
