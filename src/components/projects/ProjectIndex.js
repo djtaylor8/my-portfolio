@@ -6,9 +6,10 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
     image: {
+        transition: 'all .3s ease-in-out',
         '&:hover': {
             cursor: 'pointer',
-            'box-shadow': 'rgba(0, 0, 0, 0.22) 0px 30px 45px',
+            'box-shadow': 'rgba(0, 0, 0, 0.22) 0px 26px 40px',
             transform: 'translate3d(0px, -4px, 0px)',
         }
     },
