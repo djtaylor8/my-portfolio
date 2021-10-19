@@ -5,7 +5,7 @@ import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import Paper from '@mui/material/Paper';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import BookIcon from '@material-ui/icons/Book';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 import EmailIcon from '@material-ui/icons/Email';
 
 
@@ -19,7 +19,7 @@ export default function Footer() {
       >
         <BottomNavigationAction label="LinkedIn" icon={<LinkedInIcon />} />
         <BottomNavigationAction label="GitHub" icon={<GitHubIcon />} />
-        <BottomNavigationAction label="Blog" icon={<BookIcon />} />
+        <BottomNavigationAction label="Blog" icon={<LibraryBooksIcon />} />
         <BottomNavigationAction label="Message" icon={<EmailIcon />} />
       </BottomNavigation>
       </Paper>
