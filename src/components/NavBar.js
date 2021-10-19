@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
+import { useHistory } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -8,7 +9,11 @@ import { Switch, Typography } from '@material-ui/core';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-export default function NavBar({ darkMode, setDarkMode }) {
+
+
+export default function NavBar({ darkMode, toggleDarkMode }) {
+
+    const history = useHistory();
 
     const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -19,6 +24,26 @@ export default function NavBar({ darkMode, setDarkMode }) {
     const handleClose = (e) => {
         setAnchorEl(null);
     };
+
+    const handleHome = () => {
+        history.push('/')
+        setAnchorEl(null);
+    }
+
+    const handleAbout = () => {
+        history.push('/about')
+        setAnchorEl(null);
+    }
+
+    const handleProjects = () => {
+        history.push('/projects')
+        setAnchorEl(null);
+    }
+
+    const handleContact = () => {
+        history.push('/contact')
+        setAnchorEl(null);
+    }
 
     const ModeSwitch = styled(Switch)(({ theme }) => ({
         width: 62,
@@ -38,12 +63,12 @@ export default function NavBar({ darkMode, setDarkMode }) {
             },
             '& + .MuiSwitch-track': {
               opacity: 1,
-              backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+              backgroundColor: darkMode === 'dark' ? '#8796A5' : '#aab4be',
             },
           },
         },
         '& .MuiSwitch-thumb': {
-          backgroundColor: theme.palette.mode === 'dark' ? '#003892' : '#001e3c',
+          backgroundColor: darkMode === 'dark' ? '#003892' : '#001e3c',
           width: 32,
           height: 32,
           '&:before': {
@@ -62,7 +87,7 @@ export default function NavBar({ darkMode, setDarkMode }) {
         },
         '& .MuiSwitch-track': {
           opacity: 1,
-          backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+          backgroundColor: darkMode === 'dark' ? '#8796A5' : '#aab4be',
           borderRadius: 20 / 2,
         },
       }));
@@ -74,10 +99,9 @@ export default function NavBar({ darkMode, setDarkMode }) {
           <IconButton
             size="large"
             aria-label="menu"
-            color='primary'
             onClick={handleMenu}
           >
-        <MenuIcon />
+        <MenuIcon style={{ color: darkMode === 'dark' ? '#fff' : '#000' }}/>
           </IconButton>
           <Menu
           anchorEl={anchorEl}
@@ -98,14 +122,15 @@ export default function NavBar({ darkMode, setDarkMode }) {
           open={Boolean(anchorEl)}
           onClose={handleClose}
           >
-         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <MenuItem onClick={() => console.log('hi')}><Typography variant='subtitle2'>About</Typography></MenuItem>
-          <MenuItem onClick={() => console.log('hello')}><Typography variant='subtitle2'>Projects</Typography></MenuItem>
-          <MenuItem onClick={() => console.log('hello')}><Typography variant='subtitle2'>Contact</Typography></MenuItem>
+         <div style={{ display: 'flex', flexDirection: 'column'}}>
+         <MenuItem onClick={handleHome}><Typography variant='subtitle2'>Home</Typography></MenuItem>
+          <MenuItem onClick={handleAbout}><Typography variant='subtitle2'>About</Typography></MenuItem>
+          <MenuItem onClick={handleProjects}><Typography variant='subtitle2'>Projects</Typography></MenuItem>
+          <MenuItem onClick={handleContact}><Typography variant='subtitle2'>Contact</Typography></MenuItem>
           </div>
           </Menu>
           </div>
-          <ModeSwitch checked={darkMode} onChange={() => setDarkMode(!darkMode)} />
+          <ModeSwitch checked={darkMode === 'light' ? true : false} onChange={() => toggleDarkMode()} />
         </Toolbar>
       </AppBar>
   );

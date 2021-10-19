@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useDarkMode } from './useDarkMode';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -11,21 +12,23 @@ import ProjectShow from './components/projects/ProjectShow';
 
 function App() {
 
-const [darkMode, setDarkMode] = useState(false);
+const [darkMode, toggleDarkMode, componentMounted] = useDarkMode();
 
+const theme = createTheme({
+  palette: {
+    mode: darkMode,
+  }
+})
 
-  const theme = createTheme({
-        palette: {
-          mode: darkMode ? 'dark' : 'light',
-        },
-      });
+if (!componentMounted) {
+  return <div />
+}
 
   return (
     <Router>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        
-        <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
+        <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Switch>
 
           <Route exact path='/'>
@@ -51,3 +54,5 @@ const [darkMode, setDarkMode] = useState(false);
 }
 
 export default App;
+
+
