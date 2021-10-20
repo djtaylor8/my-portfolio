@@ -10,6 +10,7 @@ import ProjectIndex from './components/projects/ProjectIndex';
 import ProjectShow from './components/projects/ProjectShow';
 import Footer from './components/Footer';
 import { projects } from './static/data/projects.js';
+import { about } from './static/data/about.js';
 
 
 
@@ -39,7 +40,7 @@ if (!componentMounted) {
           </Route>
 
           <Route exact path='/about'>
-            <About />
+            <About about={about} theme={theme} />
           </Route>
 
           <Route exact path='/projects/:projectId'>

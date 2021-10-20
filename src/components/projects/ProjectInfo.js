@@ -33,7 +33,7 @@ const ProductInfo = (props) => {
             {project.site !== '' ? <LanguageIcon onClick={handleWebsite} style={{cursor: 'pointer', margin: '2px'}}/> : null }
             </>
             </div>
-            <Divider />
+            <Divider/>
             <Typography variant='subtitle1'>{project.description}</Typography>
         </Box>
         </Grid>
