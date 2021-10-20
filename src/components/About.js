@@ -23,7 +23,7 @@ const About = (props) => {
     return (
         <div>
          <Grid container spacing={4} direction='row' style={{display: 'flex', maxWidth: '100%', margin: '0 auto', marginTop: '2px', marginLeft: '2px', marginBottom: '2rem' }}>
-            <Grid item sm={6} style={{ maxHeight: 1000, overflow: 'auto' }} >
+            <Grid item sm={6} style={{ maxHeight: 800, overflow: 'auto', marginBottom: '2rem' }} >
             <Typography variant='h4' align='center'>About Me</Typography>
             <Divider style={{ marginBottom: '1rem', background: mode === 'dark' ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0,0,0,0.12)' }}/>
             <Carousel
