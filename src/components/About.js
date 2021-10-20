@@ -1,11 +1,12 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Grid, Typography, Box, Divider } from '@material-ui/core'
+import { Paper, Grid, Typography, Box, Divider, IconButton } from '@material-ui/core'
 import { Avatar } from '@mui/material';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Image from '../static/images/IMG_6865.png';
 import Skills from '../Skills';
+import WorkIcon from '@material-ui/icons/Work';
 
 
 const About = (props) => {
@@ -21,7 +22,6 @@ const About = (props) => {
              PrevIcon={<NavigateBeforeIcon />}
             >
             <Typography>{about.bio}</Typography>
-            <Typography>{about.hobbies}</Typography>
             <Typography>{about.dev}</Typography>
             <div>
             <Typography>{about.end}</Typography>
@@ -29,10 +29,13 @@ const About = (props) => {
             </div>
           </Carousel>
         </Grid>
-        <Grid item sm={6} style={{ marginBottom: '2rem', alignItems: 'center', justifyContent: 'center' }}>
+        <Grid item sm={6} style={{ marginBottom: '2rem' }}>
             <Typography variant='h4' align='center'>Notable Skills</Typography>
             <Divider />
             <Skills skills={skills} />
+            <IconButton style={{ display: 'flex', margin: '0 auto', marginTop: '4rem' }} >
+             <WorkIcon fontSize='large' />
+            </IconButton>
         </Grid>
         </Grid>
         </div>
