@@ -40,11 +40,6 @@ export default function NavBar({ darkMode, toggleDarkMode }) {
         setAnchorEl(null);
     }
 
-    const handleContact = () => {
-        history.push('/contact')
-        setAnchorEl(null);
-    }
-
     const ModeSwitch = styled(Switch)(() => ({
         width: 62,
         height: 34,
@@ -126,7 +121,6 @@ export default function NavBar({ darkMode, toggleDarkMode }) {
          <MenuItem onClick={handleHome}><Typography variant='subtitle2'>Home</Typography></MenuItem>
           <MenuItem onClick={handleAbout}><Typography variant='subtitle2'>About</Typography></MenuItem>
           <MenuItem onClick={handleProjects}><Typography variant='subtitle2'>Projects</Typography></MenuItem>
-          <MenuItem onClick={handleContact}><Typography variant='subtitle2'>Contact</Typography></MenuItem>
           </div>
           </Menu>
           </div>

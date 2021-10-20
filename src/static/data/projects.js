@@ -30,7 +30,7 @@ export const projects = [
         id: 4,
         title: 'Access Actors',
         subtitle: 'Sinatra, Ruby',
-        description: 'Access Actors was an early foray into building MVC applications, and also an excuse to use silly headshots of Tobias Funke (Arrested Development, anyone?). Users can create profiles, upload headshots, add a short biography, view and register for auditions, and see other actors in their area. Other libraries used include bcrypt and Active Record.',
+        description: 'Access Actors was an early foray into building MVC applications, and also an excuse to use silly headshots of Tobias Fünke (Arrested Development, anyone?). Users can create profiles, upload headshots, add a short biography, view and register for auditions, and see other actors in their area. Other libraries used include bcrypt and Active Record.',
         github: 'https://github.com/djtaylor8/sinatra-actors-access-app',
         demo: 'https://youtu.be/O3tak-Xx6Bk',
         site: ''
