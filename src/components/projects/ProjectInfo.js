@@ -27,7 +27,11 @@ const ProductInfo = (props) => {
         <Box style={{ margin: '1rem' }}>
             <div>
             <Typography variant='h4'>{project.title}</Typography>
-            <GitHubIcon style={{cursor: 'pointer'}} onClick={handleGitHub}/><YouTubeIcon onClick={handleYouTube} style={{cursor: 'pointer'}}/>{project.site !== '' ? <LanguageIcon onClick={handleWebsite} style={{cursor: 'pointer'}}/> : null }
+            <>
+            <GitHubIcon style={{cursor: 'pointer', margin: '2px' }} onClick={handleGitHub}/>
+            <YouTubeIcon onClick={handleYouTube} style={{cursor: 'pointer', margin: '2px' }}/>
+            {project.site !== '' ? <LanguageIcon onClick={handleWebsite} style={{cursor: 'pointer', margin: '2px'}}/> : null }
+            </>
             </div>
             <Divider />
             <Typography variant='subtitle1'>{project.description}</Typography>
