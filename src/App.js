@@ -11,6 +11,7 @@ import ProjectShow from './components/projects/ProjectShow';
 import Footer from './components/Footer';
 import { projects } from './static/data/projects.js';
 import { about } from './static/data/about.js';
+import { skills } from './static/data/skills.js';
 
 
 
@@ -40,7 +41,7 @@ if (!componentMounted) {
           </Route>
 
           <Route exact path='/about'>
-            <About about={about} />
+            <About about={about} skills={skills} />
           </Route>
 
           <Route exact path='/projects/:projectId'>
