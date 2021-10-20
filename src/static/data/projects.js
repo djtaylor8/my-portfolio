@@ -39,7 +39,7 @@ export const projects = [
         id: 5,
         title: 'Fantasy Basketball Star Tracker',
         subtitle: 'Ruby',
-        description: 'I am a big fan of the NBA and managing my fantasy basketball teams, so I really enjoyed building this CLI application intended to help keep track of players throughout the league. Using Nokogiri to scrape data, users can get the latest player rankings and updates from around the Association and be prepared for their fantasy matchups.',
+        description: 'I am a big fan of the NBA and managing my fantasy basketball teams, so I really enjoyed building this CLI application intended to help keep track of players throughout the league. Using Nokogiri to scrape data, this application enables you to check out the latest player rankings and updates from around the Association and be prepared for your fantasy matchups.',
         github: 'https://github.com/djtaylor8/fantasy-bball-star-tracker-cli-project',
         demo: 'https://youtu.be/Bgy46CWG9N0',
         site: ''

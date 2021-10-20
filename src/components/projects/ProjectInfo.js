@@ -24,7 +24,7 @@ const ProductInfo = (props) => {
 
     return (
         <Grid container direction='column' style={{ height: '100%' }}>
-        <Box style={{ margin: '1rem' }}>
+        <Box sx={{ marginLeft: '2rem' }}>
             <div>
             <Typography variant='h4'>{project.title}</Typography>
             <>

@@ -40,7 +40,7 @@ if (!componentMounted) {
           </Route>
 
           <Route exact path='/about'>
-            <About about={about} theme={theme} />
+            <About about={about} />
           </Route>
 
           <Route exact path='/projects/:projectId'>

@@ -14,7 +14,7 @@ const ProjectShow = (props) => {
 
     return (
         <div>
-            <Grid container spacing={1} style={{ maxWidth: 1100, margin: '0 auto', marginTop: '2rem', alignItems: 'center', justifyContent: 'center' }}>
+            <Grid container spacing={1} style={{ maxWidth: 1100, margin: '0 auto', marginTop: '5rem', justifyContent: 'center', alignItems: 'center' }}>
                 <Grid item sm={6}>
                     <ProjectImage title={project.title} />
                 </Grid>
