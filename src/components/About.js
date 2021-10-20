@@ -35,7 +35,7 @@ const About = (props) => {
             <Typography>{about.dev}</Typography>
             <div>
             <Typography>{about.end}</Typography>
-            <Avatar src={Image} variant='square' style={{ minHeight: '15rem', width: '100%', minWidth: '15rem', marginTop: '2rem' }} />
+            <Avatar src={Image} variant='square' style={{ margin: 'auto', height: '50%', width: '50%', marginTop: '1rem' }} />
             </div>
           </Carousel>
         </Grid>
