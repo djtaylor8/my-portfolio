@@ -9,6 +9,8 @@ import About from './components/About';
 import ProjectIndex from './components/projects/ProjectIndex';
 import ProjectShow from './components/projects/ProjectShow';
 import Footer from './components/Footer';
+import { projects } from './static/data/projects.js';
+
 
 
 function App() {
@@ -41,11 +43,11 @@ if (!componentMounted) {
           </Route>
 
           <Route exact path='/projects/:projectId'>
-            <ProjectShow />
+            <ProjectShow projects={projects} />
           </Route>
 
           <Route exact path='/projects'>
-            <ProjectIndex />
+            <ProjectIndex projects={projects} />
           </Route>
 
         </Switch>
