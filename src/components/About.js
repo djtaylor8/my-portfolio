@@ -9,7 +9,6 @@ import Skills from '../Skills';
 import WorkIcon from '@material-ui/icons/Work';
 import Tooltip from '@mui/material/Tooltip';
 import { Link, Element, animateScroll as scroll } from 'react-scroll'
-import { LinearScale } from '@material-ui/icons';
 
 const About = (props) => {
     const { about, skills } = props
@@ -22,7 +21,7 @@ const About = (props) => {
 
     return (
         <div>
-         <Grid container spacing={4} direction='column' style={{display: 'flex', maxWidth: '100%', margin: '0 auto', marginTop: '2px', marginLeft: '2px', marginBottom: '2rem', alignItems: 'center', justifyContent: 'center' }}>
+         <Grid container spacing={4} direction='column' style={{display: 'flex', margin: '0 auto', marginTop: '2px', marginLeft: '2px', marginBottom: '2rem', alignItems: 'center', justifyContent: 'center' }}>
             <Grid item sm={6} style={{ marginBottom: '20rem' }} >
             <Typography variant='h4' align='center'>About Me</Typography>
             <Divider style={{ marginBottom: '1rem', background: mode === 'dark' ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0,0,0,0.12)' }}/>
@@ -50,7 +49,7 @@ const About = (props) => {
             <Divider style={{ background: mode === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)' }}/>
             <Skills skills={skills} />
             <Tooltip title='View Resume' arrow placement='top'>
-            <IconButton onClick={handleResume} style={{ display: 'flex', margin: '0 auto', marginTop: '2rem', marginBottom: '1rem', color: mode === 'dark' ? '#fff' : 'rgba(0,0,0,0.54)' }} >
+            <IconButton onClick={handleResume} style={{ display: 'flex', margin: '0 auto', marginTop: '3rem', marginBottom: '1rem', color: mode === 'dark' ? '#fff' : 'rgba(0,0,0,0.54)' }} >
              <WorkIcon style={{ transform: 'scale(2.5)' }} />
             </IconButton>
             </Tooltip>

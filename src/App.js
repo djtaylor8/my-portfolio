@@ -3,17 +3,15 @@ import { useDarkMode } from './useDarkMode';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import NavBar from './components/NavBar';
+import NavBar from './components/navigation/NavBar';
 import Welcome from './components/Welcome';
 import About from './components/About';
 import ProjectIndex from './components/projects/ProjectIndex';
 import ProjectShow from './components/projects/ProjectShow';
-import Footer from './components/Footer';
+import Footer from './components/navigation/Footer';
 import { projects } from './static/data/projects.js';
 import { about } from './static/data/about.js';
 import { skills } from './static/data/skills.js';
-
-
 
 function App() {
 
@@ -22,7 +20,7 @@ const [darkMode, toggleDarkMode, componentMounted] = useDarkMode();
 const theme = createTheme({
   palette: {
     mode: darkMode,
-  }
+  },
 })
 
 if (!componentMounted) {
