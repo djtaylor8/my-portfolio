@@ -47,7 +47,7 @@ const About = (props) => {
             <Typography variant='h4' align='center'>Notable Skills & Resume</Typography>
             <Divider style={{ background: mode === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)' }}/>
             <Skills skills={skills} />
-            <IconButton onClick={handleResume} style={{ display: 'flex', margin: '0 auto', marginTop: '3rem', marginBottom: '1rem', color: mode === 'dark' ? '#fff' : 'rgba(0,0,0,0.54)' }} >
+            <IconButton onClick={handleResume} style={{ display: 'flex', margin: '0 auto', marginTop: '3rem', marginBottom: '1rem', color: mode === 'dark' ? '#fff' : 'rgba(0,0,0,0.54)', background: 'none' }} >
             <Typography variant='h5' style={{ marginRight: '0.5rem' }}>View Resume</Typography><LaunchIcon />
             </IconButton>
             <Button style={{ display: 'flex', margin: '0 auto', color: mode === 'dark' ? '#fff' : '#000'}} onClick={() => scroll.scrollToTop()} variant='text'>Back to Top</Button>
