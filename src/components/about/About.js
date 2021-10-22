@@ -42,7 +42,7 @@ const About = (props) => {
              </Link>
           </Grid>
         </Grid>
-        <Grid item sm={6} style={{ marginBottom: '2rem' }}>
+        <Grid item sm={6} style={{ marginBottom: '8rem' }}>
         <Element name='skills'>
             <Typography variant='h4' align='center'>Notable Skills & Resume</Typography>
             <Divider style={{ background: mode === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)' }}/>
