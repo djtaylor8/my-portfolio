@@ -41,10 +41,10 @@ const Project = (props) => {
 
     return( 
       <div className={classes.container}>
-            <Avatar 
+            <Avatar
+            variant="square"  
             onMouseEnter={handleMouseEnter} 
-            onMouseLeave={handleMouseLeave} 
-            variant="square" 
+            onMouseLeave={handleMouseLeave}             
             style={{ height: '100%', width: '100%' }}
             src={require(`../../static/images/${project.title}.png`).default} className={classes.image}            
             />
