@@ -6,7 +6,7 @@ export const projects = [
         description: 'Bazaar is an e-commerce site inspired by beautiful, modern online shops. Using React on the frontend and a custom Rails API on the backend, users can browse and search items, update their cart, checkout, and view past orders. Additional libraries and middleware used in this project include Redux, Thunk, Google OAuth, and the Stripe API. Also, I had a lot of fun discovering reusable components and styling this project with Material UI.',
         github: 'https://github.com/djtaylor8/bazaar-frontend',
         demo: 'https://youtu.be/itsX8QIcx-I',
-        site: ''
+        site: 'https://bazaarshop.netlify.app/'
     },
     {
         id: 2,
