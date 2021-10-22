@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDarkMode } from './useDarkMode';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import NavBar from './components/navigation/NavBar';
@@ -13,6 +13,8 @@ import { projects } from './static/data/projects.js';
 import { about } from './static/data/about.js';
 import { skills } from './static/data/skills.js';
 
+
+
 function App() {
 
 const [darkMode, toggleDarkMode, componentMounted] = useDarkMode();
@@ -20,8 +22,9 @@ const [darkMode, toggleDarkMode, componentMounted] = useDarkMode();
 const theme = createTheme({
   palette: {
     mode: darkMode,
-  },
+  }
 })
+
 
 if (!componentMounted) {
   return <div />
@@ -31,6 +34,7 @@ if (!componentMounted) {
     <Router>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+
         <NavBar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Switch>
 
