@@ -5,7 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import NavBar from './components/navigation/NavBar';
 import Welcome from './components/Welcome';
-import About from './components/About';
+import About from './components/about/About';
 import ProjectIndex from './components/projects/ProjectIndex';
 import ProjectShow from './components/projects/ProjectShow';
 import Footer from './components/navigation/Footer';

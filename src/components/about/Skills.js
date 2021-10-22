@@ -8,8 +8,8 @@ const Skills = (props) => {
 
   return <Grid container direction='row' style={{ display: 'flex', marginTop: '1rem' }}>
             {skills.map((skill) => (
-             <Grid item sm={4}>  
-             <Typography align='center'><CodeIcon style={{ fontSize: 'small'}}/> {skill}</Typography>
+             <Grid item xs={6}>  
+             <Typography variant='h5' align='center'><CodeIcon style={{ fontSize: 'small'}}/> {skill}</Typography>
             </Grid>
         ))}
         </Grid>;
