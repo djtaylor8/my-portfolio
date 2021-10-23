@@ -26,7 +26,7 @@ const About = (props) => {
 
 
     const handleResume =() => {
-        window.open('https://drive.google.com/file/d/1GEjTzzq2sJ89scGbcF0VY6ybXUf78HZu/view?usp=sharing')
+        window.open('https://drive.google.com/file/d/1Ezf6Ic7cBaHiaUfryU_E1ht4xYJ6Grqd/view?usp=sharing')
     }
 
     return (
