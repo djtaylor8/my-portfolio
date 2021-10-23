@@ -18,7 +18,7 @@ const Welcome = () => {
 
     return (
         <div>
-            <Grid container spacing={1} direction='row' style={{display: 'flex', margin: '0 auto', maxWidth: 1000, justifyContent: 'center', alignItems: 'center', marginTop: '3rem', marginBottom: '5rem' }}>
+            <Grid container spacing={1} direction='row' style={{display: 'flex', margin: '0 auto', maxWidth: 1200, justifyContent: 'center', alignItems: 'center', marginTop: '3rem', marginBottom: '5rem' }}>
             <Grid item xs={6} style={{ display: 'flex', margin: '0 auto', flexDirection: 'column' }}>
             <div style={{ margin: '0 auto' }}>
             <Typography variant='h1'>DJ Taylor</Typography>
