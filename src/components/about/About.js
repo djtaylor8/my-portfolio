@@ -1,17 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-material-ui-carousel'
-import { Grid, Typography, Divider, IconButton, Button } from '@material-ui/core'
+import { Grid, Typography, Divider, Button } from '@material-ui/core'
 import { Avatar } from '@mui/material';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import Image from '../../static/images/IMG_6865.png';
-import Skills from './Skills';
-import LaunchIcon from '@material-ui/icons/Launch';import Tooltip from '@mui/material/Tooltip';
-import { Link, Element, animateScroll as scroll } from 'react-scroll'
+import { Document, Page, pdfjs } from "react-pdf";
+import Resume from '../../static/data/DJ Taylor Resume.pdf'
+import { Link, Element, animateScroll as scroll } from 'react-scroll';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
 
 const About = (props) => {
     const { about, skills } = props
     const mode = localStorage.getItem('darkMode')
+
+    const [numPages, setNumPages] = useState(null);
+    const [pageNumber, setPageNumber] = useState(1);
+  
+    function onDocumentLoadSuccess({ numPages }) {
+      setNumPages(numPages);
+    }
 
 
     const handleResume =() => {
@@ -37,20 +48,26 @@ const About = (props) => {
             </div>
           </Carousel>
           <Grid item style={{ margin: '1rem' }}>
-            <Link activeClass="active" to="skills" spy={true} smooth={true}  duration={500}>
-                <Button style={{ display: 'flex', margin: '0 auto', color: mode === 'dark' ? '#fff' : '#000' }} variant='text'>View Skills and Link to Resume</Button>
+            <Link activeClass="active" to="resume" spy={true} smooth={true}  duration={500}>
+                <Button style={{ display: 'flex', margin: '0 auto', color: mode === 'dark' ? '#fff' : '#000' }} variant='text'>View Resume</Button>
              </Link>
           </Grid>
         </Grid>
-        <Grid item sm={6} style={{ marginBottom: '8rem' }}>
-        <Element name='skills'>
-            <Typography variant='h4' align='center'>Notable Skills & Resume</Typography>
-            <Divider style={{ background: mode === 'dark' ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.12)' }}/>
-            <Skills skills={skills} />
-            <IconButton onClick={handleResume} style={{ display: 'flex', margin: '0 auto', marginTop: '3rem', marginBottom: '1rem', color: mode === 'dark' ? '#fff' : 'rgba(0,0,0,0.54)', background: 'none' }} >
-            <Typography variant='h5' style={{ marginRight: '0.5rem' }}>View Resume</Typography><LaunchIcon />
-            </IconButton>
-            <Button style={{ display: 'flex', margin: '0 auto', color: mode === 'dark' ? '#fff' : '#000'}} onClick={() => scroll.scrollToTop()} variant='text'>Back to Top</Button>
+        <Grid item xs={6} style={{ display: 'flex', margin: '0 auto', marginBottom: '2rem', alignItems: 'center', justifyContent: 'center' }}>
+        <Element name='resume'>
+            <Document file={Resume} 
+            onLoadSuccess={onDocumentLoadSuccess}
+            style={{ cursor: 'pointer' }}
+            >
+            <Page
+            pageNumber={pageNumber} 
+            pageWidth={600} 
+            renderAnnotationLayer={false}
+            
+            />
+            <OpenInNewIcon onClick={handleResume} style={{ display: 'flex', margin: '0 auto', marginTop: '1rem', cursor: 'pointer' }}/>
+            </Document>
+            <Button style={{ display: 'flex', margin: '0 auto', marginTop: '1rem', color: mode === 'dark' ? '#fff' : '#000'}} onClick={() => scroll.scrollToTop()} variant='text'>Back to Top</Button>
         </Element>
         </Grid>
         </Grid>
