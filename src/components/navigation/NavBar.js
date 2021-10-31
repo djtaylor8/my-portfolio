@@ -2,12 +2,11 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import { useHistory } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
-import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import { Switch, Typography } from '@material-ui/core';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+
+import HomeIcon from '@material-ui/icons/Home';
 
 
 
@@ -16,14 +15,6 @@ export default function NavBar({ darkMode, toggleDarkMode }) {
     const history = useHistory();
 
     const [anchorEl, setAnchorEl] = React.useState(null);
-
-    const handleMenu = (e) => {
-        setAnchorEl(e.currentTarget);
-    };
-
-    const handleClose = (e) => {
-        setAnchorEl(null);
-    };
 
     const handleHome = () => {
         history.push('/')
@@ -91,38 +82,9 @@ export default function NavBar({ darkMode, toggleDarkMode }) {
       <AppBar position="static" elevation={0} style={{background: 'none', display: 'flex' }}>
         <Toolbar>
         <div style={{ flexGrow: '1' }}>
-          <IconButton
-            size="large"
-            aria-label="menu"
-            onClick={handleMenu}
-          >
-        <MenuIcon style={{ color: darkMode === 'dark' ? '#fff' : '#000' }}/>
-          </IconButton>
-          <Menu
-          anchorEl={anchorEl}
-          PaperProps={{
-              style: {
-                  width: 100,
-              },
-          }}
-          anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'left',
-          }}
-          keepMounted
-          transformOrigin={{
-              vertical: 'top',
-              horizontal: 'left',
-          }}
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-          >
-         <div style={{ display: 'flex', flexDirection: 'column'}}>
-         <MenuItem onClick={handleHome}><Typography variant='subtitle2'>Home</Typography></MenuItem>
-          <MenuItem onClick={handleAbout}><Typography variant='subtitle2'>About</Typography></MenuItem>
-          <MenuItem onClick={handleProjects}><Typography variant='subtitle2'>Projects</Typography></MenuItem>
-          </div>
-          </Menu>
+          <MenuItem onClick={handleHome} style={{ marginRight: '1rem', color: darkMode === 'dark' ? '#fff' : '#000', background: 'none' }}><HomeIcon /></MenuItem>
+          <MenuItem onClick={handleAbout} style={{ marginRight: '1rem', background: 'none' }}><Typography variant='subtitle1' style={{ color: darkMode === 'dark' ? '#fff' : '#000' }}>About</Typography></MenuItem>
+          <MenuItem onClick={handleProjects} style={{ background: 'none' }}><Typography variant='subtitle1' style={{ color: darkMode === 'dark' ? '#fff' : '#000' }}>Projects</Typography></MenuItem>
           </div>
           <ModeSwitch checked={darkMode === 'light' ? true : false} onChange={() => toggleDarkMode()} />
         </Toolbar>
