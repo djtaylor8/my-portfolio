@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import Image from '../static/images/IMG_9375.png';
-import Button from '@mui/material/Button';
 import { Avatar } from '@mui/material';
 import { makeStyles } from '@material-ui/core/styles';
 
