@@ -5,6 +5,7 @@ import AppBar from '@mui/material/AppBar';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import { Switch, Typography } from '@material-ui/core';
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 
 import HomeIcon from '@material-ui/icons/Home';
 
@@ -29,6 +30,10 @@ export default function NavBar({ darkMode, toggleDarkMode }) {
     const handleProjects = () => {
         history.push('/projects')
         setAnchorEl(null);
+    }
+
+    const handleResume =() => {
+      window.open('https://drive.google.com/file/d/1WD1P52gATB5DoyMGuV7W1g6XhB9QL3BV/view?usp=sharing')
     }
 
     const ModeSwitch = styled(Switch)(() => ({
@@ -84,7 +89,8 @@ export default function NavBar({ darkMode, toggleDarkMode }) {
         <div style={{ flexGrow: '1' }}>
           <MenuItem onClick={handleHome} style={{ marginRight: '1rem', color: darkMode === 'dark' ? '#fff' : '#000', background: 'none' }}><HomeIcon /></MenuItem>
           <MenuItem onClick={handleAbout} style={{ marginRight: '1rem', background: 'none' }}><Typography variant='subtitle1' style={{ color: darkMode === 'dark' ? '#fff' : '#000' }}>About</Typography></MenuItem>
-          <MenuItem onClick={handleProjects} style={{ background: 'none' }}><Typography variant='subtitle1' style={{ color: darkMode === 'dark' ? '#fff' : '#000' }}>Projects</Typography></MenuItem>
+          <MenuItem onClick={handleProjects} style={{ marginRight: '1rem', background: 'none' }}><Typography variant='subtitle1' style={{ color: darkMode === 'dark' ? '#fff' : '#000' }}>Projects</Typography></MenuItem>
+          <MenuItem onClick={handleResume} style={{ background: 'none' }}><Typography variant='subtitle1' style={{ color: darkMode === 'dark' ? '#fff' : '#000' }}>Resume<OpenInNewIcon style={{ fontSize: 'small', marginLeft: '5px' }}/></Typography></MenuItem>
           </div>
           <ModeSwitch checked={darkMode === 'light' ? true : false} onChange={() => toggleDarkMode()} />
         </Toolbar>
