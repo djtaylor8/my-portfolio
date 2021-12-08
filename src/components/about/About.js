@@ -36,7 +36,6 @@ const About = (props) => {
 
     return (
         <ThemeProvider theme={theme}>
-        <div>
          <Grid container spacing={6} direction={largeScreen ? 'row' : 'column'} style={{maxWidth: mobile ? '1224px' : 1200, display: 'flex', margin: '0 auto', marginTop: '2px', marginLeft: '2px', marginBottom: '2rem', alignItems: 'center', justifyContent: 'space-around' }}>
             <Grid item xs={mobile ? 10: 8} style={{ marginBottom: '1rem'}} >
             <Typography variant='h4' align='center'>About Me</Typography>
@@ -49,7 +48,6 @@ const About = (props) => {
             <Avatar src={Image} variant='circle' className={classes.sizeAvatar} />
             </Grid>
         </Grid>
-        </div>
         </ThemeProvider>
     );
 };
