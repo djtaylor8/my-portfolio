@@ -12,7 +12,7 @@ export const projects = [
         id: 2,
         title: 'Musical Musings',
         subtitle: 'Ruby on Rails',
-        description: 'As a music teacher, I enjoy having students make connections between music and storytelling. With that in mind, I built Musical Musings so that users could create playlists and share stories all in one place. I deployed this app using Heroku and have since used it in the classroom with my students, and it has been awesome getting to see what they create! Using the Spotify API, users can search and add songs from within the app. In addition, users are able to craft stories, add images, and listen to other playlists.  Other features and libraries include Google OAuth, bcrypt, Bootstrap, and CanCanCan, a really cool gem to help with route authorizations.',
+        description: 'As a music teacher, I enjoyed having students make connections between music and storytelling. With that in mind, I built Musical Musings so that users could create playlists and share stories all in one place. I deployed this app using Heroku and have since used it in the classroom with my students, and it has been awesome getting to see what they create! Using the Spotify API, users can search and add songs from within the app. In addition, users are able to craft stories, add images, and listen to other playlists.  Other features and libraries include Google OAuth, bcrypt, Bootstrap, and CanCanCan, a really cool gem to help with route authorizations.',
         github: 'https://github.com/djtaylor8/musical-musings-app',
         demo: 'https://youtu.be/kAcZSR2HpFA',
         site: 'https://musicalmusings.herokuapp.com/'
