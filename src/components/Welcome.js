@@ -15,17 +15,18 @@ const useStyles = makeStyles((theme) => ({
 const Welcome = () => {
     const classes = useStyles();
     const largeScreen = useMediaQuery(theme => theme.breakpoints.up('md'));
+    const mobile = useMediaQuery(theme => theme.breakpoints.down('mobile'));
 
     return (
         <div>
-            <Grid container spacing={1} direction={largeScreen ? 'row' : 'column'} style={{display: 'flex', maxWidth: 1200, margin: '0 auto', justifyContent: 'center', alignItems: 'center', marginTop: '3rem', marginBottom: '5rem' }}>
+            <Grid container spacing={2} direction={largeScreen ? 'row' : 'column'} style={{display: 'flex', maxWidth: mobile ? '1224px' : 1200, margin: '0 auto', justifyContent: 'center', alignItems: 'center', marginTop: '3rem', marginBottom: '5rem' }}>
             <Grid item xs={largeScreen ? 6 : 12} style={{ display: 'flex', alignItems:'center', justifyContent: 'center', margin: '0 auto' }}>
             <div>
             <Typography variant='h1'>DJ Taylor</Typography>
             <Typography variant='subtitle1' align='center'>Full Stack Developer | Musician</Typography>
             </div>
             </Grid>
-            <Grid item xs={largeScreen ? 6 : 8} style={{ marginTop: '2rem' }}>
+            <Grid item xs={largeScreen ? 6 : 12} style={{ marginTop: '2rem' }}>
             <Avatar src={Image} className={classes.sizeAvatar} />    
             </Grid>
             </Grid>
