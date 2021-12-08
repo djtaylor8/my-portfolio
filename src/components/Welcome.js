@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Welcome = () => {
     const classes = useStyles();
-    const largeScreen = useMediaQuery(theme => theme.breakpoints.up('md'));
+    const largeScreen = useMediaQuery(theme => theme.breakpoints.up('mobile'));
 
     return (
         <div>
