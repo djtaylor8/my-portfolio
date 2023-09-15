@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/my-portfolio/static/js/main.965242a6.chunk.js",
+    "main.js.map": "/my-portfolio/static/js/main.965242a6.chunk.js.map",
+    "runtime-main.js": "/my-portfolio/static/js/runtime-main.1cbf5b3b.js",
+    "runtime-main.js.map": "/my-portfolio/static/js/runtime-main.1cbf5b3b.js.map",
+    "static/js/2.394b66f3.chunk.js": "/my-portfolio/static/js/2.394b66f3.chunk.js",
+    "static/js/2.394b66f3.chunk.js.map": "/my-portfolio/static/js/2.394b66f3.chunk.js.map",
+    "index.html": "/my-portfolio/index.html",
+    "static/js/2.394b66f3.chunk.js.LICENSE.txt": "/my-portfolio/static/js/2.394b66f3.chunk.js.LICENSE.txt",
+    "static/media/Access Actors.png": "/my-portfolio/static/media/Access Actors.c47ffb0e.png",
+    "static/media/Bazaar.png": "/my-portfolio/static/media/Bazaar.5ebebcb2.png",
+    "static/media/BrewLog.png": "/my-portfolio/static/media/BrewLog.573b9b36.png",
+    "static/media/Fantasy Basketball Star Tracker.png": "/my-portfolio/static/media/Fantasy Basketball Star Tracker.f05753ca.png",
+    "static/media/IMG_6865.png": "/my-portfolio/static/media/IMG_6865.68e8eddb.png",
+    "static/media/IMG_9375.png": "/my-portfolio/static/media/IMG_9375.99c8abc7.png",
+    "static/media/Musical Musings.png": "/my-portfolio/static/media/Musical Musings.5bc4a386.png",
+    "static/media/Portfolio.png": "/my-portfolio/static/media/Portfolio.a4ba2d23.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1cbf5b3b.js",
+    "static/js/2.394b66f3.chunk.js",
+    "static/js/main.965242a6.chunk.js"
+  ]
+}
