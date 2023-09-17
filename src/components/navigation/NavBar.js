@@ -31,7 +31,7 @@ export default function NavBar({ darkMode, toggleDarkMode }) {
 
   const handleResume = () => {
     window.open(
-      "https://drive.google.com/file/d/1GOdDj_Tv634GqunVq8-Te632UZFN43lV/view?usp=sharing"
+      "https://drive.google.com/file/d/1BloonomgTdMwGa0wGdX5RGSEZ7y1frpI/view?usp=sharing"
     );
   };
 
